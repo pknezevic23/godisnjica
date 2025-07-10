@@ -1,0 +1,145 @@
+
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to top, #ffd5ec, #fff);
+  color: #e60073;
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: kucanje 2s infinite;
+}
+
+.tekst {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.galerija {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 10px;
+}
+
+.galerija img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.galerija img:hover {
+  transform: scale(1.05);
+}
+
+.video video {
+  width: 90%;
+  max-width: 500px;
+  border: 3px solid #e60073;
+  border-radius: 20px;
+  margin: 20px auto;
+  display: block;
+}
+
+#gumbIznenadenje {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+#gumbIznenadenje:hover {
+  background-color: #ff3385;
+  transform: scale(1.1);
+}
+
+.timeline .godina {
+  margin: 10px auto;
+  padding: 10px;
+  background: #ffe6f0;
+  border-left: 5px solid #ff66b2;
+  max-width: 400px;
+  text-align: left;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Srca animacija */
+.srce {
+  position: fixed;
+  top: -50px;
+  font-size: 30px;
+  animation: padaj 5s linear infinite;
+  color: red;
+  z-index: 999;
+}
+
+.balon {
+  position: fixed;
+  bottom: -40px;
+  font-size: 30px;
+  animation: leti 10s linear forwards;
+  z-index: 998;
+}
+
+@keyframes padaj {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+@keyframes kucanje {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); color: #ff3385; }
+}
+
+@keyframes leti {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-120vh); }
+}
+
+#skrivena {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #a30059;
+  font-style: italic;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#gumbSkrivenaPoruka {
+  padding: 12px 25px;
+  font-size: 1.1em;
+  background-color: #ffe6f0;
+  color: #d1006b;
+  border: 2px dashed #ff66b2;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+#gumbSkrivenaPoruka:hover {
+  background-color: #ffccde;
+  transform: scale(1.05);
+}
